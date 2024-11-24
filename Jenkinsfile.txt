@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Check Node.js Version') {
+            steps {
+                sh 'node -v'  // Print the active Node.js version
+                sh 'npm -v'   // Print npm version
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'  // Install React app dependencies
+            }
+        }
+        stage('Build App') {
+            steps {
+                sh 'npm run build'  // Build the React app
+            }
+        }
+    }
+}
