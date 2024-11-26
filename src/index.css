@@ -12,7 +12,6 @@ code {
     monospace;
 }
 
-/* Code for Print Specific Div  */
 
 @media print {
   body * {
